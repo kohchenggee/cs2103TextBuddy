@@ -96,13 +96,20 @@ public class TextBuddy{
       }
     
   }
-
+  /**
+   * This method add a new line to the text file and print out the 
+   * execution message.
+   */ 
   public static void addLine(Scanner sc){
         input=sc.nextLine();
         input=input.substring(1);
         list.add(input);
         System.out.printf(MESSAGE_ADD_FORMAT,input);
   }
+  /**
+   * This method deletes a line from the text file according to the number 
+   * of the line and print out execution message.
+   */ 
   public static void deleteLine(Scanner sc){
     int i;
         i=sc.nextInt();
@@ -113,6 +120,9 @@ public class TextBuddy{
           System.out.println(MESSAGE_NOT_FOUND);
         }
   }
+  /**
+   * This method display all the lines from the text file
+   */   
   public static void displayList(){
 	  
     if(list.size()==0){
@@ -124,6 +134,11 @@ public class TextBuddy{
           }
         }
   }
+  
+  /**
+   * This method search through the text file and print out the line 
+   * which contains the keyword
+   */ 
   public static void searchList(Scanner sc){
 	  boolean searchChecking=false;
 	  input=sc.nextLine();
@@ -138,11 +153,20 @@ public class TextBuddy{
 		  System.out.println(MESSAGE_SEARCH_FAIL );
 	  }
   }
+  
+  /**
+   * This method deletes all the lines from the text file  
+   * and print out execution message.
+   */ 
   public static void clearList(){
     list.clear();
     System.out.printf(MESSAGE_CLEAR_FORMAT,dest);
     
   }
+  
+  /**
+   * This method sorts all lines from the text file alphabetically
+   */ 
   public static void sortList(){
 	  Collections.sort(list);
 	  System.out.println(MESSAGE_SORTED);
